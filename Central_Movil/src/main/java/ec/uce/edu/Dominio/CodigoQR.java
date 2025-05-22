@@ -37,14 +37,19 @@ public class CodigoQR {
 
     // Métodos
     public String leerCodigo() {
-        return null;
+        return this.codigoLeido;
     }
 
     public String convertirAscii(String qr) {
-        return null;
+        StringBuilder ascii = new StringBuilder();
+        for (char c : qr.toCharArray()) {
+            ascii.append((int) c).append(" ");
+        }
+        return ascii.toString().trim();
     }
 
     public boolean validarFormato(String codigo) {
-        return false;
+        // Por ejemplo: solo letras y números, mínimo 5 caracteres
+        return codigo != null && codigo.matches("[A-Za-z0-9]{5,}");
     }
 }

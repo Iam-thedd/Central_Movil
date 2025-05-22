@@ -1,6 +1,6 @@
 package ec.uce.edu.Dominio;
 
-public class Estudiante  {
+public class Estudiante {
     private String matricula;
     private String facultad;
 
@@ -30,8 +30,9 @@ public class Estudiante  {
         this.facultad = facultad;
     }
 
-    //metodos
+    // Método para verificar si la matrícula tiene un formato válido
     public boolean verificarMatricula() {
-        return true;
+        // Validar que la matrícula tenga exactamente 8 dígitos numéricos
+        return matricula.matches("\\d{8}");
     }
 }

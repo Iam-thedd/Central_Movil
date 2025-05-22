@@ -1,34 +1,31 @@
 package ec.uce.edu.Dominio;
 
 public class Profesor {
-    //Declaracion de variables//
-    String facultad;
-    boolean esVip;
+    private String facultad;
+    private boolean esVip;
 
-    //Metodo constructor por defecto//
-    public Profesor (){
+    public Profesor() {
         facultad = "Ingenieria y Ciencias Aplicadas";
         esVip = true;
     }
 
-    //Metodo constructor con parámetros//
-    public Profesor (String facultad, boolean esVip){
-        this.facultad = facultad;
+    public Profesor(String facultad, boolean esVip) {
+        if(facultad != null && !facultad.isEmpty()) {
+            this.facultad = facultad;
+        } else {
+            this.facultad = "Ingenieria y Ciencias Aplicadas";  // Valor por defecto si no se pasa uno válido.
+        }
         this.esVip = esVip;
     }
 
-    //Metodo obtenerFacultad//
-    public String obtenerFacultad (){
-        return facultad;
-    }
-
-    //Metodos get y set//
     public String getFacultad() {
         return facultad;
     }
 
     public void setFacultad(String facultad) {
-        this.facultad = facultad;
+        if (facultad != null && !facultad.isEmpty()) {
+            this.facultad = facultad;
+        }
     }
 
     public boolean isEsVip() {

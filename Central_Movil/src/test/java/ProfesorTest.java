@@ -30,9 +30,5 @@ public class ProfesorTest {
         assertFalse(profesor.isEsVip());
     }
 
-    @Test
-    public void testObtenerFacultad() {
-        Profesor profesor = new Profesor("Derecho", true);
-        assertEquals("Derecho", profesor.obtenerFacultad());
-    }
+
 }

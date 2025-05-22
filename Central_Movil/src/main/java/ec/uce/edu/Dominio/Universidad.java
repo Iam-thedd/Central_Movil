@@ -10,7 +10,7 @@ public class Universidad {
     public Universidad() {
         zonasEstacionamiento = 3;
         horarioApertura = "7:00 am";
-        horarioCierre = "18:00pm";
+        horarioCierre = "22:00pm";
 
     }
 
