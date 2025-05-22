@@ -49,7 +49,8 @@ public class CodigoQR {
     }
 
     public boolean validarFormato(String codigo) {
-        // Por ejemplo: solo letras y números, mínimo 5 caracteres
-        return codigo != null && codigo.matches("[A-Za-z0-9]{5,}");
+
+            if (codigo == null) return false;
+            return codigo.matches("^QR-\\d{1,6}$");
     }
 }
